@@ -31,5 +31,15 @@ target_link_libraries(detect_chessboard
                             ${std_msgs_LIBRARIES}
                             ${image_transport_LIBRARIES})
 
+add_executable(intrinsic_calibration src/intrinsic_calibration.cpp)
+target_link_libraries(intrinsic_calibration
+        ${catkin_LIBRARIES}
+        ${OpenCV_LIBRARIES}
+        ${roscpp_LIBRARIES}
+        ${sensor_msgs_LIBRARIES}
+        ${cv_bridge_LIBRARIES}
+        ${std_msgs_LIBRARIES}
+        ${image_transport_LIBRARIES})
+
 
 
